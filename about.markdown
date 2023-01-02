@@ -4,14 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hi, I am Raghav Saboo, and I specialize in delivering business impact at scale
-using machine learning and AI. I am currently a lead machine learning engineer 
-at Doordash working on problems in the search and recommendation space.
+Hello! My name is Raghav Saboo and I am passionate about using machine learning and AI to drive business impact. As a
+lead machine learning engineer at Doordash, I am currently working on improving search and recommendations for our
+users. In the past, I have led applied ML science teams at Amazon Alexa AI and consulted for a variety of leading
+companies in industries such as healthcare and crypto exchanges. I am proud to say that my projects have helped these
+companies achieve hundreds of millions of dollars in impact.
 
-Previously, I have led applied ML science teams at Amazon Alexa AI, and as 
-a consultant for major unicorns and Fortune 50 companies in a variety of
-industries from healthcare to crypto exchanges. Each of my projects have
-helped companies realize hundreds of millions of dollars in measured impact.
-
-I enjoy using writing as a medium of self study, and hope that these articles
-can help others with similar interests also.
+I enjoy using writing as a way to continue learning and growing in my field, and I hope that my articles can be helpful
+to others with similar interests. Thanks for reading!
