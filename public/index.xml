@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raghav Saboo&#39;s Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Raghav Saboo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/ml-development-lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ml-development-lifecycle/</guid>
+      <description>&lt;h2 id=&#34;hidepagination-false&#34;&gt;title: &amp;ldquo;Building ML Products that work&amp;rdquo;&#xA;date: &amp;ldquo;2025-01-02&amp;rdquo;&#xA;summary: &amp;ldquo;A system that has worked well for me for large, ambiguous ML project undertakings.&amp;rdquo;&#xA;description: &amp;ldquo;An LSM Tree overview and Java implementation.&amp;rdquo;&#xA;toc: true&#xA;readTime: true&#xA;autonumber: true&#xA;math: true&#xA;tags: [&amp;ldquo;machine learning&amp;rdquo;, &amp;ldquo;project&amp;rdquo;, &amp;ldquo;product strategy&amp;rdquo;]&#xA;showTags: true&#xA;hideBackToTop: false&#xA;hidePagination: false&lt;/h2&gt;&#xA;&lt;p&gt;Some of the best work I have seen come out of the teams I have lead involved some spark of curiosity: a hypothesis about how to make things better for users. Over many such projects, I have found that a systematic approach is invaluable for turning such ideas into reality. The system is there not to impede or create friction but to provide a framework for exploration. This is especially critical for Machine Learning Engineers because while we are given a million parameters to play with to refine our objective functions, the path to success is filled with ambiguity and dead ends. A systematic approach to such work prevents burn out and keeps the creativity engine fueled.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
