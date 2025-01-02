@@ -1,0 +1,11 @@
+{{ $showFooter := default true .Site.Params.showFooter }} {{ if $showFooter }}
+{{ if not .Site.Params.footerContent }}
+<p>
+  <span class="copy"
+    >Copyright &copy; {{ dateFormat "2006" now }} {{ .Site.Params.author
+    }}.</span
+  >
+</p>
+{{ end }} {{ with .Site.Params.footerContent }}
+<p>{{ . | markdownify }}</p>
+{{ end }} {{ end }}
