@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="An LSM Tree overview and Java implementation."/>
+
+<title>
+    
+    The Modern Search Stack and How it May Evolve | Raghav Saboo&#39;s Blog
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/the-modern-search-stack/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/the-modern-search-stack/">
+  <meta property="og:site_name" content="Raghav Saboo&#39;s Blog">
+  <meta property="og:title" content="The Modern Search Stack and How it May Evolve">
+  <meta property="og:description" content="An LSM Tree overview and Java implementation.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-20T00:00:00+00:00">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Product Strategy">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.186794b3399a702d3092949042cdc215dea303c17e71e7c0254768448de11db8.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="http://localhost:1313/">Raghav Saboo&#39;s Blog</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/the-modern-search-stack/">The Modern Search Stack and How it May Evolve</a>
+</div>
+
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">The Modern Search Stack and How it May Evolve</h1>
+    
+    <p class="single-summary">Information Retrieval is</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-11-20T00:00:00&#43;00:00">November 20, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      4 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+  
+
+  <div class="single-tags">
+    
+    <span>
+      <a href="http://localhost:1313/tags/machine-learning/">#Machine Learning</a>
+    </span>
+    
+    
+    <span>
+      <a href="http://localhost:1313/tags/project/">#Project</a>
+    </span>
+    
+    
+    <span>
+      <a href="http://localhost:1313/tags/product-strategy/">#Product Strategy</a>
+    </span>
+    
+    
+  </div>
+
+  
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#llm-for-free-form-search">LLM for Free Form Search</a></li>
+    <li><a href="#transformer-based-ranking">Transformer Based Ranking</a></li>
+    <li><a href="#continous-learning-for-your-next-search">Continous Learning for Your Next Search</a></li>
+    <li><a href="#embedding-based-retrieval--generative-query-and-document-understanding">Embedding Based Retrieval / Generative Query and Document Understanding</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <h2 class="heading" id="llm-for-free-form-search">
+  LLM for Free Form Search
+  <a href="#llm-for-free-form-search">#</a>
+</h2>
+<p>Large Language Models (LLMs) are transforming free-form search by enabling conversational and contextually aware experiences. Emerging tools such as SearchGPT and AI-powered overviews are setting a new standard for intuitive search experiences. For example, Perplexity AI combines advanced language modeling with search results, while Amazon Rufus leverages LLMs to enhance query understanding and relevance.</p>
+<ul>
+<li>SearchGPT</li>
+<li>AI Overviews</li>
+<li>Perplexity AI</li>
+<li>Amazon Rufus</li>
+</ul>
+<p><a href="https://searchengineland.com/searchgpt-what-you-need-to-know-446455">https://searchengineland.com/searchgpt-what-you-need-to-know-446455</a>
+<a href="https://dl.acm.org/doi/10.1145/3534965">https://dl.acm.org/doi/10.1145/3534965</a></p>
+<h2 class="heading" id="transformer-based-ranking">
+  Transformer Based Ranking
+  <a href="#transformer-based-ranking">#</a>
+</h2>
+<p>Transformers have significantly advanced the capabilities of search ranking models. With innovations such as BERT and RankFormer, search engines can now interpret nuanced queries and return highly relevant results. These models power search systems at companies like Google and Amazon, improving both accuracy and user satisfaction.</p>
+<ul>
+<li>BERT</li>
+<li>RankFormer
+<a href="https://blog.google/products/search/how-ai-powers-great-search-results/">https://blog.google/products/search/how-ai-powers-great-search-results/</a>
+<a href="https://www.amazon.science/blog/leveraging-transformers-to-improve-product-retrieval-results">https://www.amazon.science/blog/leveraging-transformers-to-improve-product-retrieval-results</a></li>
+</ul>
+<h2 class="heading" id="continous-learning-for-your-next-search">
+  Continous Learning for Your Next Search
+  <a href="#continous-learning-for-your-next-search">#</a>
+</h2>
+<p>Modern users demand experiences tailored to their preferences and history. Continuous learning frameworks, such as Instagram Explore’s recommendation system, incorporate behavioral data, contextual signals, and user feedback to deliver results that feel uniquely personalized. These systems use reinforcement learning and multi-task learning to optimize relevance, engagement, and conversion rates.</p>
+<ul>
+<li>Instagram Explore Recommendation</li>
+<li>Video Recommendation</li>
+</ul>
+<p>Modern users demand experiences tailored to their preferences and history. Personalization frameworks incorporate behavioral data, contextual signals, and user feedback to deliver results that feel uniquely tailored. These frameworks often rely on reinforcement learning and multi-task learning to optimize for multiple objectives, such as relevance, click-through rate, and conversion rate.</p>
+<h2 class="heading" id="embedding-based-retrieval--generative-query-and-document-understanding">
+  Embedding Based Retrieval / Generative Query and Document Understanding
+  <a href="#embedding-based-retrieval--generative-query-and-document-understanding">#</a>
+</h2>
+<p>Traditional search systems relied heavily on term frequency-inverse document frequency (TF-IDF) and BM25 algorithms. While effective for their time, they lacked the nuance to understand semantic relationships. Enter neural ranking models, which leverage transformer architectures like BERT and GPT to understand context and intent at an unparalleled level. These models bring semantic relevance to the forefront, enabling more intuitive and satisfying search results.</p>
+<p>Two-tower models have revolutionized how we match users and items in e-commerce, content platforms, and beyond. By learning separate embeddings for queries and documents (or users and items), these models enable fast and scalable retrieval, especially when paired with Approximate Nearest Neighbor (ANN) search techniques.</p>
+<p>Vector search represents a paradigm shift in how information is indexed and retrieved. Instead of relying on tokenized text, it uses dense embeddings to capture the meaning and context of data. This is particularly useful for multimedia search, such as images, audio, and video, where traditional methods fall short.</p>
+<ul>
+<li>Paper: Query Understanding in the Age of LLMs <a href="https://arxiv.org/abs/2306.16004">https://arxiv.org/abs/2306.16004</a></li>
+<li>Paper: Query Intent Understanding with LLMs using Retrieval Augmentation and Multi-Stage Distillation <a href="https://aclanthology.org/2022.emnlp-industry.50.pdf">https://aclanthology.org/2022.emnlp-industry.50.pdf</a></li>
+<li><a href="https://medium.com/@siladityaghosh/unveiling-the-power-of-llm-frameworks-for-document-analysis-and-inquiry-8e6773fcb035">https://medium.com/@siladityaghosh/unveiling-the-power-of-llm-frameworks-for-document-analysis-and-inquiry-8e6773fcb035</a></li>
+<li><a href="https://medium.com/@addepto/how-to-use-llm-to-extract-information-from-documents-6395fcbc0291">https://medium.com/@addepto/how-to-use-llm-to-extract-information-from-documents-6395fcbc0291</a></li>
+</ul>
+<p><a href="https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/">https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/</a>
+<a href="https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you">https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you</a>
+<a href="https://blog.x.com/engineering/en_us/topics/infrastructure/2020/streaming-logging-pipeline-of-home-timeline-prediction-system">https://blog.x.com/engineering/en_us/topics/infrastructure/2020/streaming-logging-pipeline-of-home-timeline-prediction-system</a>
+<a href="https://arxiv.org/pdf/2006.11632">https://arxiv.org/pdf/2006.11632</a>
+<a href="https://tech.instacart.com/optimizing-search-relevance-at-instacart-using-hybrid-retrieval-88cb579b959c">https://tech.instacart.com/optimizing-search-relevance-at-instacart-using-hybrid-retrieval-88cb579b959c</a>
+<a href="https://www.instacart.com/company/how-its-made/how-instacart-uses-embeddings-to-improve-search-relevance/">https://www.instacart.com/company/how-its-made/how-instacart-uses-embeddings-to-improve-search-relevance/</a>
+<a href="https://dl.acm.org/doi/10.1145/3534678.3539164">https://dl.acm.org/doi/10.1145/3534678.3539164</a>
+<a href="https://medium.com/better-ml/embedding-learning-for-retrieval-29af1c9a1e65">https://medium.com/better-ml/embedding-learning-for-retrieval-29af1c9a1e65</a></p>
+<p><a href="https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/">https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/</a></p>
+<p>Human in the Loop Active Learning for Ambiguous Queries
+Human-in-the-loop systems, like Amazon’s Crowd Coachable Retriever, enhance search quality by incorporating crowd-sourced feedback. Google’s search quality rater guidelines similarly ensure that ambiguous queries yield useful results by leveraging human input.</p>
+<ul>
+<li>Amazon - Crowd Coachable Retriever <a href="https://www.amazon.science/publications/active-learning-with-crowd-sourcing-improves-information-retrieval">https://www.amazon.science/publications/active-learning-with-crowd-sourcing-improves-information-retrieval</a></li>
+<li>Google search: How our quality raters make search results better <a href="https://support.google.com/websearch/answer/9281931?hl=en">https://support.google.com/websearch/answer/9281931?hl=en</a>
+<ul>
+<li>Search Quality Rater Guidelines: An Overview <a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf">https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf</a></li>
+</ul>
+</li>
+</ul>
+<p>Graph Neural Networks
+Graph Neural Networks (GNNs) are increasingly used to recommend related products, leveraging relational data between entities. Combined with real-time processing of user interactions, these models enable highly dynamic and context-aware search experiences.</p>
+<p><a href="https://www.amazon.science/blog/using-graph-neural-networks-to-recommend-related-products">https://www.amazon.science/blog/using-graph-neural-networks-to-recommend-related-products</a></p>
+<p>Streaming User Interactions in Real time
+<a href="https://blog.x.com/engineering/en_us/topics/infrastructure/2021/processing-billions-of-events-in-real-time-at-twitter-">https://blog.x.com/engineering/en_us/topics/infrastructure/2021/processing-billions-of-events-in-real-time-at-twitter-</a></p>
+<p>Predictive Search - Query Suggestions
+Predictive search systems, such as autocomplete and query suggestions, are being revolutionized by LLMs. These models go beyond simple word prediction, enabling smarter and more contextually aware user interactions.</p>
+<p><a href="https://www.algolia.com/blog/ai/predictive-search-and-autocomplete">https://www.algolia.com/blog/ai/predictive-search-and-autocomplete</a>
+LLMs as a smarter word predictor <a href="https://medium.com/@venkatesh.mymail/beyond-autocomplete-building-a-smarter-next-word-predictor-with-gpt-2-218bbc49775e">https://medium.com/@venkatesh.mymail/beyond-autocomplete-building-a-smarter-next-word-predictor-with-gpt-2-218bbc49775e</a>
+<a href="https://blog.personal.ai/autocomplete-ai-prompts-for-faster-recall-b34a7505b6b2">https://blog.personal.ai/autocomplete-ai-prompts-for-faster-recall-b34a7505b6b2</a></p>
+<p>Reinforcement Learning for UI Module Layout
+Optimizing UI layout dynamically can significantly enhance user experience. Reinforcement learning models, such as those used at Expedia and Amazon, adapt module layouts to maximize engagement and satisfaction.</p>
+<p><a href="https://medium.com/expedia-group-tech/multi-variate-web-optimisation-using-linear-contextual-bandits-567f563cb59">https://medium.com/expedia-group-tech/multi-variate-web-optimisation-using-linear-contextual-bandits-567f563cb59</a>
+<a href="https://assets.amazon.science/92/9c/e2ab8a7640daabae51f87942a89a/a-map-of-bandits-for-ecommerce.pdf">https://assets.amazon.science/92/9c/e2ab8a7640daabae51f87942a89a/a-map-of-bandits-for-ecommerce.pdf</a></p>
+<p>Privacy Preserving Search
+As privacy concerns grow, search systems are adopting privacy-preserving techniques to handle sensitive data securely. These methods include differential privacy and federated learning, ensuring user data remains protected while maintaining search relevance.</p>
+<p><a href="https://www.amazon.science/publications/privacy-preserving-active-learning-on-sensitive-data-for-user-intent-classification">https://www.amazon.science/publications/privacy-preserving-active-learning-on-sensitive-data-for-user-intent-classification</a></p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/ml-development-lifecycle/">
+                        Building ML Products that work
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+       
+
+<p>
+  <span class="copy"
+    >Copyright &copy; 2025 Raghav Saboo.</span
+  >
+</p>
+  
+    </footer>
+
+    
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+    
+
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

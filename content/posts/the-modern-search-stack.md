@@ -1,3 +1,4 @@
+---
 title: "The Modern Search Stack and How it May Evolve"
 date: "2024-11-20"
 summary: "Information Retrieval is "
@@ -10,6 +11,7 @@ tags: ["machine learning", "project", "product strategy"]
 showTags: true
 hideBackToTop: false
 hidePagination: false
+draft: true
 ---
 
 ## LLM for Free Form Search

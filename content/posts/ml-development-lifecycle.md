@@ -1,3 +1,4 @@
+---
 title: "Building ML Products that work"
 date: "2025-01-02"
 summary: "A system that has worked well for me for large, ambiguous ML project undertakings."
@@ -10,6 +11,7 @@ tags: ["machine learning", "project", "product strategy"]
 showTags: true
 hideBackToTop: false
 hidePagination: false
+draft: true
 ---
 
 Some of the best work I have seen come out of the teams I have lead involved some spark of curiosity: a hypothesis about how to make things better for users. Over many such projects, I have found that a systematic approach is invaluable for turning such ideas into reality. The system is there not to impede or create friction but to provide a framework for exploration. This is especially critical for Machine Learning Engineers because while we are given a million parameters to play with to refine our objective functions, the path to success is filled with ambiguity and dead ends. A systematic approach to such work prevents burn out and keeps the creativity engine fueled.
