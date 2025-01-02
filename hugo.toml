@@ -1,0 +1,68 @@
+baseURL = 'https://raghavsaboo.com/'
+languageCode = 'en-us'
+title = "Raghav Saboo's Blog"
+theme = 'typo'
+
+[taxonomies]
+tags = 'tags'
+
+[params]
+author = 'Raghav Saboo'
+
+# Metadata description
+description = "Machine Learning and Chemical Engineer writing about stuff"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTite = 'Hi!'
+homeIntroContent = """
+I currently work as a tech lead of the search and personalization pod as a Machine Learning engineer.
+In my prior career I was a Chemical Engineer automating large scale operations at chemical plants.
+
+In my spare time I write over here, cook, travel, do photography.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# List parameters
+paginationSize = 100
+listSummaries = true
+listDataFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/raghavsaboo"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
