@@ -6,6 +6,49 @@
     <description>Recent content in Tags on Raghav Saboo&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/tags/machine-learning/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product Strategy</title>
+      <link>http://localhost:1313/tags/product-strategy/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/product-strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project</title>
+      <link>http://localhost:1313/tags/project/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Building</title>
+      <link>http://localhost:1313/tags/building/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/building/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>http://localhost:1313/tags/career/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/career/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ownership</title>
+      <link>http://localhost:1313/tags/ownership/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ownership/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

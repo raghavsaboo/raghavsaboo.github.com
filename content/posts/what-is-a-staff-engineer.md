@@ -1,7 +1,7 @@
 ---
 title: "What is a Staff Engineer's Role?"
 date: "2024-11-20"
-summary: ""
+summary: "Don't fret"
 description: ""
 toc: true
 readTime: true
@@ -49,4 +49,4 @@ Decide what tools we need to build.
 
 This person is NOT expected to execute on all projects needed to hit the goal for the workstream.
 
-![alt text](image.png)
+![alt text](./images/dri-diag.png)

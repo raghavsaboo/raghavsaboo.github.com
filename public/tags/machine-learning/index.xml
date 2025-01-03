@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/posts/ml-development-lifecycle/</guid>
       <description>A system that has worked well for me for large, ambiguous ML project undertakings.</description>
     </item>
+    <item>
+      <title>The Modern Search Stack and How it May Evolve</title>
+      <link>http://localhost:1313/posts/the-modern-search-stack/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-modern-search-stack/</guid>
+      <description>Information Retrieval is</description>
+    </item>
   </channel>
 </rss>
