@@ -2,7 +2,7 @@
 title: "Building ML Products that work"
 date: "2026-01-04"
 summary: "A system that has worked well for me for large, ambiguous ML project undertakings."
-description: "An LSM Tree overview and Java implementation."
+description: "How to work on ambiguous ML projects"
 toc: true
 readTime: true
 autonumber: true
