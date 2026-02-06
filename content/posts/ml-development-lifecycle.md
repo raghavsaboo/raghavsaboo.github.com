@@ -1,6 +1,6 @@
 ---
 title: "Building ML Products that work"
-date: "2025-01-02"
+date: "2026-01-04"
 summary: "A system that has worked well for me for large, ambiguous ML project undertakings."
 description: "An LSM Tree overview and Java implementation."
 toc: true
