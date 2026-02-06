@@ -16,7 +16,7 @@ draft: false
 
 Some of the best work I have seen come out of the teams I have lead involved some spark of curiosity: a hypothesis about how to make things better for users. Over many such projects, I have found that a systematic approach is invaluable for turning such ideas into reality. The system is there not to impede or create friction but to provide a framework for exploration. This is especially critical for Machine Learning Engineers because while we are given a million parameters to play with to refine our objective functions, the path to success is filled with ambiguity and dead ends. A systematic approach to such work prevents burn out and keeps the creativity engine fueled.
 
-### Hypothesis-Driven Model Development
+## Hypothesis-Driven Model Development
 
 The cornerstone of successful ML projects is a hypothesis-driven approach. Each project begins with a question: “If we improve certain parts of the ML system, can we solve a consumer problem and impact key metrics?” To answer this, we follow a sequence of well-defined steps:
 
@@ -43,11 +43,11 @@ The cornerstone of successful ML projects is a hypothesis-driven approach. Each 
    - Deploy models: Integrate solutions into production systems, ensuring robustness and scalability.
    - Monitor results: Analyze real-time performance and identify areas for further improvement.
 
-### The Power of Hypotheses
+## The Power of Hypotheses
 
 A hypothesis is more than an educated guess; it’s a roadmap for experimentation. By breaking down a big idea into smaller, testable hypotheses, you ensure that every step is rooted in data and aligned with business goals.
 
-#### Example: Improving Subtotals with Personalized Recommendations
+### Example: Improving Subtotals with Personalized Recommendations
 
 **Good Hypotheses Chain:**
 - **Hypothesis:** Showing higher-priced items in categories users prefer will nudge them toward higher subtotals.
@@ -61,36 +61,36 @@ A hypothesis is more than an educated guess; it’s a roadmap for experimentatio
 
 The first approach validates assumptions incrementally, reducing risks and ensuring outcomes align with user needs.
 
-### Key Phases in the ML Development Life Cycle
+## Key Phases in the ML Development Life Cycle
 
-#### 1. **Hypothesis Generation**
+### **Hypothesis Generation**
 Start by observing user behaviors, analyzing product metrics, and identifying opportunities. Frame your problem as a series of questions linked to measurable outcomes.
 
-#### 2. **Feasibility Study**
+### **Feasibility Study**
 Explore the data and system infrastructure to determine the viability of your solution. For instance, if your hypothesis involves user purchase behavior, ensure you have the necessary data on spending patterns and item categories.
 
-#### 3. **Implementation**
+### **Implementation**
 Develop both system-level and model-level components:
 
 - **System-Level Components:** Enhance ingestion pipelines, retrieval algorithms, ranking models, and reranking systems.
 - **Model-Level Components:** Focus on training data, feature engineering, labels, objectives, and architecture.
 
-#### 4. **Evaluation**
+### **Evaluation**
 Evaluate your solution rigorously:
 
 - **Offline Metrics:** Validate model quality with historical data.
 - **Online Metrics:** Use A/B tests to assess real-world impact.
 
-#### 5. **Productionization**
+### **Productionization**
 Deploy your solution, monitor its performance, and iterate based on user feedback and live metrics.
 
-### Lessons Learned
+## Lessons Learned
 
 1. **Collaboration is Key:** ML projects thrive on cross-functional collaboration. Bring together product managers, engineers, analysts, and stakeholders early and often.
 2. **Data Drives Decisions:** Let data guide your hypotheses, implementation, and evaluation.
 3. **Iterate Relentlessly:** Hypotheses often evolve. Be ready to pivot based on findings.
 
-### Conclusion
+## Conclusion
 
 Personalization is both an art and a science. By following a hypothesis-driven framework, you can tackle complex problems methodically, align your team’s efforts, and deliver measurable impact. Whether you’re optimizing recommendations, improving engagement, or driving revenue, this approach will help you navigate the challenges of ML development with confidence.
 
